@@ -1,3 +1,5 @@
+'use client';
+
 import { useState } from 'react';
 import { NpcMessage } from '@/components/NpcMessage';
 import Image from 'next/image';
