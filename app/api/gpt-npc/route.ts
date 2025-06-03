@@ -1,4 +1,4 @@
-import { openai } from '@/lib/openai';
+import { openai } from '@/lib/openai'; // エラーが出ているなら相対パスにすることも検討
 
 export async function POST(req: Request) {
   const { message, character } = await req.json();
@@ -24,5 +24,5 @@ export async function POST(req: Request) {
   });
 }
 
-// ✅ これがモジュール扱いのために必要
+// ✅ Vercelのビルドエラー対策で必須
 export {};
