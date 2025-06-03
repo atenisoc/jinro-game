@@ -8,7 +8,7 @@ export async function POST(req: Request) {
     messages: [
       {
         role: 'system',
-        content: `${character}として人狼ゲーム中に自然な発言をしてください。`,
+        content: `${character}として自然に発言してください。`,
       },
       {
         role: 'user',
@@ -18,10 +18,11 @@ export async function POST(req: Request) {
   });
 
   const reply = response.choices[0].message.content;
+
   return new Response(JSON.stringify({ reply }), {
     headers: { 'Content-Type': 'application/json' },
   });
 }
 
-// モジュールとして認識させるために追加
+// ✅ これがモジュール扱いのために必要
 export {};
