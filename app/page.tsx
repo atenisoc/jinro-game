@@ -7,7 +7,7 @@ export default function Page() {
   const messages = [
     { character: 'tatsumaki', message: '誰が怪しいのか、はっきりさせなさい' },
     { character: 'haibara', message: 'あまり話していない人も気になりますね' },
-    { character: 'hiroyuki', message: 'それってあなたの感想ですよね？？' },
+    { character: 'hiroyuki', message: 'それってあなたの感想ですよね？？？' },
   ];
 
   return (
