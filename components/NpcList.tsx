@@ -1,20 +1,10 @@
-import NpcCard from './NpcCard';
-
-const npcData = [
-  { name: 'タツマキ' },
-  { name: '灰原哀' },
-  { name: 'ルルーシュ' },
-  { name: '爆豪勝己' },
-  { name: 'ジェイド' },
-];
+// components/NpcList.tsx
 
 export default function NpcList() {
   return (
-    <div className="space-y-2">
+    <div className="flex flex-col gap-4">
       <h2 className="text-xl font-bold mb-2">NPC一覧</h2>
-      {npcData.map((npc) => (
-        <NpcCard key={npc.name} name={npc.name} />
-      ))}
+      <p>（表示テスト中）</p>
     </div>
   );
 }
