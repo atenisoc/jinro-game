@@ -1,6 +1,6 @@
-import NpcCard from './NpcCard';
+import NpcCard, { Props } from './NpcCard';
 
-const npcData = [
+const npcData: Props[] = [
   {
     name: 'タツマキ',
     image: '/images/tatsumaki.png',
@@ -20,20 +20,3 @@ const npcData = [
     message: '……この状況、計算通りだ。',
   },
 ];
-
-export default function NpcList() {
-  return (
-    <div className="flex flex-col gap-4">
-      <h2 className="text-xl font-bold mb-2">NPC一覧</h2>
-      {npcData.map((npc) => (
-        <NpcCard
-          key={npc.name}
-          name={npc.name}
-          image={npc.image}
-          role={npc.role}
-          message={npc.message}
-        />
-      ))}
-    </div>
-  );
-}
