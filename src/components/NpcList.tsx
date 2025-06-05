@@ -26,13 +26,14 @@ export default function NpcList() {
     <div className="flex flex-col gap-4">
       <h2 className="text-xl font-bold mb-2">NPC一覧</h2>
       {npcData.map((npc) => (
-        <NpcCard
-          key={npc.name}
-          name={npc.name}
-          image={npc.image}
-          role={npc.role}
-          message={npc.message}
-        />
+<NpcCard
+  key={npc.name}
+  name={npc.name}
+  image={npc.image}
+  role={npc.role}
+  message={npc.message}
+/>
+
       ))}
     </div>
   );
