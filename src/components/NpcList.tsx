@@ -2,22 +2,22 @@ import NpcCard from './NpcCard';
 
 const npcData = [
   {
-    name: 'タチE�Eキ',
+    name: 'タツマキ',
     image: '/images/tatsumaki.png',
-    role: '霊�E老E,
-    message: '私�E趁E�E力で真実を見抜くわよ、E,
+    role: '霊能者',
+    message: '私は超能力で真実を見抜くわよ。',
   },
   {
     name: '灰原哀',
     image: '/images/haibara.png',
-    role: '占ぁE��',
-    message: '琁E��的に見て、あなたが怪しいわ�E、E,
+    role: '占い師',
+    message: '理論的に見て、あなたが怪しいわね。',
   },
   {
     name: 'ルルーシュ',
     image: '/images/lulu.png',
     role: '村人',
-    message: '……こ�E状況、計算通りだ、E,
+    message: '……この状況、計算通りだ。',
   },
 ];
 
