@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { NpcMessage } from '../../components/NpcMessage';
+import NpcMessage from '../../components/NpcMessage';
 
 const characters = [
   { name: 'タツマキ', role: '霊能者', image: '/npc/tatsumaki.png' },
@@ -10,7 +10,9 @@ const characters = [
 ];
 
 export default function Day1Page() {
-  const [messages, setMessages] = useState([]);
+  const [messages, setMessages] = useState<
+    { name: string; role: string; message: string; image: string }[]
+  >([]);
 
   const handleSpeak = async (name: string) => {
     const character = characters.find((c) => c.name === name);
@@ -51,10 +53,8 @@ export default function Day1Page() {
         {messages.map((msg, idx) => (
           <NpcMessage
             key={idx}
-            name={msg.name}
-            role={msg.role}
+            character={msg.name}
             message={msg.message}
-            image={msg.image}
           />
         ))}
       </div>
