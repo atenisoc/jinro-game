@@ -26,7 +26,13 @@ export default function NpcList() {
   return (
     <div className="flex flex-col gap-4">
       {npcData.map((npc) => (
-        <NpcCard key={npc.name} {...npc} />
+        <NpcCard
+          key={npc.name}
+          name={npc.name}
+          image={npc.image}
+          role={npc.role}
+          message={npc.message}
+        />
       ))}
     </div>
   );
