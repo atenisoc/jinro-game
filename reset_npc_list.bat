@@ -1,10 +1,11 @@
 @echo off
 cd /d C:\Users\USER\jinro-game
+
 echo === Git add ===
-git add src/components/NpcList.tsx
+git add -A
 
 echo === Git commit ===
-git commit -m "Auto update NpcList.tsx"
+git commit -m "Auto commit via batch" || echo No changes to commit.
 
 echo === Git push ===
 git push
