@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { NpcMessage } from '@/components/NpcMessage';
+import NpcMessage from '@/components/NpcMessage';
 import Image from 'next/image';
 
 const characters = [
@@ -13,7 +13,9 @@ const characters = [
 ];
 
 export default function NpcDay1() {
-  const [messages, setMessages] = useState<any[]>([]);
+  const [messages, setMessages] = useState<
+    { name: string; role: string; message: string; image: string }[]
+  >([]);
   const [reinoResult, setReinoResult] = useState<string>('レム → 黒：？？');
   const [吊り候補, set吊り候補] = useState<string>('未選定');
 
@@ -88,10 +90,8 @@ export default function NpcDay1() {
         {messages.map((msg, idx) => (
           <NpcMessage
             key={idx}
-            name={msg.name}
-            role={msg.role}
+            character={msg.name}
             message={msg.message}
-            image={msg.image}
           />
         ))}
       </div>
