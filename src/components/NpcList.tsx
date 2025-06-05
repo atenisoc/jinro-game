@@ -19,7 +19,6 @@ const npcData = [
     role: '村人',
     message: '……この状況、計算通りだ。',
   },
-  // 他のNPCも必要に応じて追加
 ];
 
 export default function NpcList() {
