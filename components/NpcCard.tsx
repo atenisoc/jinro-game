@@ -1,13 +1,19 @@
-// components/NpcCard.tsx
+// components/NpcList.tsx
+import NpcCard from './NpcCard';
 
-type Props = {
-  name: string;
-};
+const npcData = [
+  { name: 'タツマキ' },
+  { name: '灰原哀' },
+  { name: 'ルルーシュ' },
+];
 
-export default function NpcCard({ name }: Props) {
+export default function NpcList() {
   return (
-    <div className="border rounded p-2 shadow">
-      <p className="text-lg font-semibold">{name}</p>
+    <div className="space-y-2">
+      <h2 className="text-xl font-bold mb-2">NPC一覧</h2>
+      {npcData.map((npc) => (
+        <NpcCard key={npc.name} name={npc.name} />
+      ))}
     </div>
   );
 }
